@@ -1,0 +1,60 @@
+// Declaring a variable and setting a value to it
+// $primary-color: #A9A9A9;
+// $secondary-color: #BADA55;
+// $main-font: 'Poppins', sans-serif;
+
+// Importing a setup partial
+@import 'partials/setup';
+@import 'partials/mixins';
+@import 'partials/variables';
+@import 'partials/typography';
+// Declaring a mixin
+
+// @mixin flex($direction, $align, $justify) {
+//   display: flex;
+//   flex-direction: $direction;
+//   align-items: $align;
+//   justify-content: $justify;
+// }
+
+
+
+
+body {
+  @include flex(column, center, center);
+  height: 100vh;
+  background-color: $primary-color;
+  color: $secondary-color;
+  font-family: $main-font;
+}
+
+// How to write in CSS
+// .gallery {
+//   border: 1px solid cornflowerblue;
+// }
+
+// .gallery li {
+//   display: inline-block;
+// }
+
+// .gallery li a {
+//   color: $secondary-color;
+// }
+
+// .gallery li a:hover {
+//   color: thistle;
+// }
+
+// Same thing in SCSS
+.gallery {
+  border: 1px solid cornflowerblue;
+  li {
+    display: inline-block;
+    a {
+      color: $secondary-color;
+      &:hover {
+        color: darken($secondary-color, 20);
+      }
+    }
+  }
+}

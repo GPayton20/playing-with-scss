@@ -1,0 +1,12 @@
+@mixin fontStyles($font-size, $line-height,$font-color: cornflowerblue) {
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $font-color;
+}
+
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
